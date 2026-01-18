@@ -8,7 +8,7 @@ import traceback
 
 app = Flask(__name__)
 db = Redis(
-        host='cfc-lab-1-db', 
+        host='db', 
         port=6379, db=0, 
         decode_responses=True,
         password='password1'
