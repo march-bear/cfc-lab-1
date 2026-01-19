@@ -32,9 +32,9 @@ def hello():
     t.incr('counter')
     t.get('counter')
     res = t.execute()
+    print(f'Gotten from db: {res[0]}', flush=True)
     return f'This page was visited already {res[0]} times'
 
 
 if __name__ == '__main__':
-    db.set('counter', 0)
     serve(app, host='0.0.0.0', port=5000)
